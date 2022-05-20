@@ -1,1155 +1,797 @@
-/* ============ FONTS =============== */
-
-
-
-@font-face {
-    font-family: 'Gilroy-Bold';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-         url('../fonts/gilroy-bold-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/gilroy-bold-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-
-  @font-face {
-    font-family: 'Gilroy-ExtraBold';
-    font-style: normal;
-    font-weight: 800;
-    src: local(''),
-         url('../fonts/gilroy_extrabold-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/gilroy_extrabold-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-
-  @font-face {
-    font-family: 'Gilroy-Medium';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/gilroy-medium-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/gilroy-medium-webfont.woff2') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* poppins-600 - latin */
-  @font-face {
-    font-family: 'Gilroy-Regular';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/gilroy-regular-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/gilroy-regular-webfont.woff2') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-
-/* ================ GENERAL BLOCKS =========*/
-* {
-    box-sizing: border-box;
-  }
-  
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Gilroy-ExtraBold';
-    font-style: normal;
-    font-weight: 800;
-    color: #000000;
-}  
-
-.wrapper--central {
-    margin: 0 auto;
-    padding: 0 ;
-    max-width: 1240px;
-}
-
-.list--reset{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.link--default{
-    display: block;
-    margin: 0;
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ================= HEADER ============ */
-
-.header{
-    position: absolute;
-    margin-top: 40px;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-}
-
-.header__wrapper{
-    display: flex;
-    align-items: center;
-}
-
-.header__nav{
-    margin: 0 43px;
-}
-
-.header__list{
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 40px;
-    justify-self: center;
-    
-}
-
-.header__list-item{
-    display: block;
-}
-
-
-.header__item-link{
-    display: block;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #3A3A3A;
-    transition: all .5s ease-in;
-}
-
-.header__item-link:hover svg,
-.header__item-link:focus svg {
-    transform: rotate(-90deg);
-
-}
-
-.header__item-text--submenu{
-    padding-right: 8px;
-}
-
-
-.arrow-down path {
-    fill:currentColor;
-}
-
-
-.form-search{
-    width: 470px;
-    position: relative;
-    background-color: #fff;
-    margin-right: 121px;
-}
-
-
-.form-search__button{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    margin: 0;
-
-    border:none;
-    background-color: transparent;
-
-}
-
-.form-search__button svg{
-    margin: 0;
-}
-
-.form-search__input{
-    text-indent: 40px;
-    border: none;
-    width: 100%;
-}
-
-
-.header__list-personal {
-    width: 146px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all .5s ease-in-out;
-}
-
-.header__link-wish-list:hover img,  
-.header__link-wish-list:focus img {
-    transform: scale(1.2);
-}
-
-.header__link-shopping-cart:hover img,
-.header__link-shopping-cart:focus img {
-    transform: scale(1.2);
-}
-
-.account-logo{
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* ================= HERO ============== */
-
-.hero{
-    position: relative;
-    padding: 85px 0 22px;
-    margin-bottom: 66px;
-    width: 100%;
-    min-height: 796px;
-    background-image: linear-gradient(to right, #F9F1E7 67%, #FCF8F3 33%);
-    
-}
-
-
-.hero__content{
-    position: relative;
-    z-index: 2 ;
-    display: flex;
-
-    align-content: flex-end;
-    max-width: 1240px;
-    margin: 66px auto 0;
-}
-
-.hero__central-block{
-    margin-right: 32px;
-
-    padding: 60px;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(5px)
-}
-
-.hero__title{
-    margin: 0 0 16px;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 120%;
-    color: #3A3A3A;
-
-}
-
-.hero__subtitle{
-    display: block;
-    margin: 0 0 48px;
-
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-    color: #898989;
-}
-
-
-.hero__btn-shop-now{
-    padding: 24px 140px;
-
-    text-align: center;
-    background-color: #E89F71;
-    font-size: 20px;
-    line-height: 150%;
-    color: #FFFFFF;
-    transition: all .4s ease-in-out;
-}
-
-.hero__btn-shop-now:active {
-    background-color: #fff;
-    color: #E89F71;
-}
-
-
-.hero__elements-controls{
-    display: flex;
-    align-items: center;
-    align-self: flex-start;
-    margin-right: 490px;
-
-}
-
-
-.slider-dots{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 auto;
-}
-
-
-.slider-dots__btn {
-    border: 1px solid transparent;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.dot {
-    fill:#D8D8D8;
-}
-
-.slider-dots__btn:active,
-.slider-dots__btn:focus {
-    border-radius: 50%;
-    border: 1px solid #E89F71;
-    
-}
-
-.slider-dots__btn:active svg path,
-.slider-dots__btn:focus svg path{
-    fill: #E89F71;
-}
-
-.switcher {
-    display: flex;
-}
-
-
-.switcher__btn-lft{
-    width: 48px;
-    height: 48px;
-    margin-right: 8px;
-    border: 1px solid transparent;
-    background-color: #E89F71;
-    border-radius: 50%;
-    opacity: 0.3;
-    cursor: pointer;
-}
-
-
-.lft-arrow  path {
-    fill:#f05c01;
-}
-
-.switcher__btn-rgt{
-    width: 48px;
-    height: 48px;
-    border: 1px solid transparent;
-    background-color: #E89F71;
-    border-radius: 50%;
-    opacity: 0.3;
-    cursor: pointer;
-}
-
-.rgt-arrow  path {
-    fill:#f05c01;
-   
-}
-
-.switcher__btn-lft:active,
-.switcher__btn-lft:focus {
-    opacity: 1;
-}
-
-.switcher__btn-rgt:active,
-.switcher__btn-rgt:focus {
-    opacity: 1;
-}
-
-
-.hero__img-switcher {
-    display: flex;
-    margin: 221px 0 0 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;  
-    width: 100%;
-    overflow: hidden;
-
-}
-
-.hero__template-img:not(:last-child){
-    position: relative;
-    margin-right: 20px;
-
-}
-
-.hero__descr-item{
-    position: absolute;
-    padding: 24px;
-    bottom: 40px;
-    right: 40px;
-    z-index: 2;
-
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(5px);
-} 
-
-
-
-.hero__name-series {
-    display: block;
-    margin: 0 0 4px;
-
-    font-size: 28px;
-    line-height: 120%;
-    color: #3A3A3A;
-}
-
-.hero__name-subtitle{
-    display: block;
-    margin: 0 0 8px;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #616161;
-}
-
-.hero__price{
-    display: inline-block;
-    margin: 0 92px 0 0;
-
-    font-size: 20px;
-    line-height: 150%;
-    color: #3A3A3A;
-}
-
-.hero__link-details{
-    display: inline-block;
-    transition: all .6s ease-in-out;
-}
-
-.hero__link-details:hover,
-.hero__link-details:focus svg {
-    transform: translate(15px);
-}
-
-.hero__images{
-    min-height: 553px;
-    object-fit: cover;
-}
-
-.without-category {
-    display: none;
-}
-
-/* ================== Advantages ==================== */
-
-.advantages{
-    margin-bottom: 88px;
-}
-
-.avantages__wrapper{
-    display: grid;
-    grid-template-columns: 285px 247px 207px 225px;
-    grid-gap: 92px;
-}
-
-.advantages__card{
-    display: flex;
-    align-items: center;
-}
-
-.advantages__pic{
-    display: block;
-    margin: 0 22px;
-    width: 40px;
-    height: 40px;
-    
-}
-
-.advantages__title{
-    margin: 0 0 2px;
-
-    display: block;
-    font-size: 18px;
-    line-height: 150%;
-    color: #3A3A3A;
-}
-
-.advantages__subtitle{
-    margin: 0;
-    display: block;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #898989;
-}
-
-/* ====================== Our products============= */
-.our-products{
-    margin-bottom: 44px;
-}
-
-.our-products__title{
-    margin: 0 auto 32px;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 120%;
-    text-align: center;
-    color: #3A3A3A;
-}
-
-
-.our-products__cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 32px;
-    margin-bottom: 32px;
-}
-
-.our-products__card{
-    background-color: #F4F5F7;
-    position: relative;
-}
-
-.our-products__features{
-    padding: 12px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    z-index: 2;
-
-    border-radius: 50%;
-    background-color: #E97171;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #FFFFFF;
-
-}
-
-.features--new{
-    background-color: #2ec1ac;
-}
-
-
-.our-products__text{
-    margin: 16px 30px 30px 16px;
-}
-
-.our-products__name-series{
-    display: block;
-    margin: 0 0 8px;
-    font-size: 24px;
-    line-height: 120%;
-    color: #3A3A3A;
-}
-
-.our-products__name-subtitle{
-    display: block;
-    margin: 0 0 8px;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #898989;
-
-}
-
-.our-products__price{
-    display: inline-block;
-    margin: 0 3px 0 0;
-
-    font-size: 20px;
-    line-height: 150%;
-    color: #3A3A3A;
-}
-
-.our-products__price-sale{
-    display: inline-block;
-    margin: 0;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    text-decoration-line: line-through;
-    color: #B0B0B0;
-}
-
-.our-products__wrapper-card{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    width: 100%;
-    background-color: #3A3A3A;
-    opacity: 0;
-
-    padding: 175px 41px;
-}
-
-
-.add-tocard__link{
-    margin: 0 auto 24px;
-    padding: 12px 58px;
-
-    background-color: #FFFFFF;
-    font-size: 16px;
-    line-height: 150%;
-    color: #E89F71;
-}
-
-
-
-.our-products__social-media{
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 64px;
-}
-
-
-.share__link{
-    display: flex;
-    margin: 0;
-    align-items: center;
-}
-
-.share-pic{
-    display: block;
-    margin: 0 8px 0 0;
-}
-
-.share__text{
-    display: block;
-    margin: 0;
-
-    font-size: 16px;
-    line-height: 150%;
-    color: #FFFFFF;
-}
-
-
-.like__link{
-    display: flex;
-    margin: 0;
-    align-items: center;
-}
-
-.like-pic{
-    display: block;
-    margin: 0 8px 0 0;
-    border: none;
-}
-
-.like-pic path{
-    fill:white;
-
-}
-
-.like__text{
-    display: block;
-    margin: 0;
-
-    font-size: 16px;
-    line-height: 150%;
-    color: #FFFFFF;
-}
-
-.our-products__card:hover .our-products__wrapper-card{
-    opacity: .9;
-}
-
-
-.our-products__show-more-btn {
-    margin: 0 auto;
-    padding: 12px 82px;
-    max-width: 250px;
-
-    background-color: #FFFFFF;
-    border: 1px solid #E89F71;
-    
-    font-size: 16px;
-    text-align: center;
-    line-height: 150%;
-    color: #E89F71;
-    transition: all .6s ease-in-out;
-}
-
-.our-products__show-more-btn:active {
-    background-color: #E89F71;
-    color: #fff;
-}
-
-/* ============= ROOM INSPIRATION ============== */
-
-.room-insp{
-    background-color:#fcf8f3;
-    padding: 44px 0;
-    margin-bottom: 44px;
-    overflow: hidden;
-
-}
-
-.room-insp__wrapper{
-    display: flex;
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-.room-insp__text{
-    display: flex;
-    flex: 0 0 100%;
-    margin: 0 86px 0 auto;
-  
-}
-
-.room-insp__text-wrapper{
-    display: flex;
-    width: 30%;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.room-insp__title{
-    margin: 0 0 8px;
-
-    text-align: left;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 120%;
-}
-
-.room-insp__subtitle{
-    display: block;
-    margin: 0 0 24px;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #616161;
-
-}
-
-.room-insp__explore-btn{  
-    margin: 0 auto 0 0;
-    padding: 12px 40px;
-
-    background-color: #E89F71;
-    color: #FFFFFF;
-    text-align: center;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 150%;   
-    transition: all .5s ease-in-out;
-}
-
-.room-insp__explore-btn:active {
-    background-color: #fff;
-    color: #E89F71;
-}
-
- .room-insp__content{
-    display: flex;
-    flex: 0 0 auto;
-    align-items: flex-start;
-    transform: translate(-50%, 0px);
-    overflow: hidden;
-}
-
-
-.room-inst__general-block-photo{
-    margin: 0 24px 0 0;
-    position: relative;
-    
-}
-
-.room-insp__block-info{
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-    z-index: 2;
-
-    padding: 32px;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(5px);
-
-}
-
-.room-insp__name-category{
-    display: block;
-    margin: 0 10px 8px;
-
-    text-align: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #616161;
-}
-
-.room-insp__name-product{
-    display: block;
-    margin: 0 auto;
-
-    text-align: center;
-    font-size: 28px;
-    line-height: 120%;
-    color: #3A3A3A;
-}
-
-.room-insp__link-to-product{
-    position: absolute;
-    right: -42px;
-    bottom: 0;
-    padding: 12px;
-
-    background-color: #E89F71;
-    transition: all .6s ease-in-out;
-}
-
-.room-insp__link-to-product svg path{
-    fill: #fff;
-}
-
-.room-insp__link-to-product:focus svg,
-.room-insp__link-to-product:hover svg {
-    transform: translate(10px);
-}
-
-.room-inst__middle-block-photo{
-    margin: 0 24px 0 0;
-    position: relative;
-}
-
-.room-inst__middle-photo{
-    margin-bottom: 40px;
-}
-
-.room-inst___slider {
-    justify-content: flex-start;
-}
-
-.room-inst___switcher{
-    position: absolute;
-    right: -20px;
-    top: 225px;
-    z-index: 2;
-
-}
-
-.room-inst___switcher .switcher__btn-rgt{
-    background-color: #fff;
-    opacity: 1;
-    box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
-    transition: all .5s ;
-}
-
-.room-inst___last-photo{
-    max-width: 372px;
-}
-
-/* =============== TIPS AND TRICKS ==================== */
-
-.tips-tricks__wrapper{
-    max-width: 1285px;
-    margin-bottom: 44px;
-}
-
-.tips-triks__title{
-    margin: 32px 0;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 120%;
-    text-align: center;
-    color: #3A3A3A;
-}
-
-.tips-tricks__switcher{
-    position: relative;
-}
-
-.tips-tricks__switcher  .switcher__btn-lft{
-    position: absolute;
-    margin: 0;
-    top: 128px;
-    left: -20px;
-    z-index: 2;
-    
-    background-color: #fff;
-    opacity: 1;
-    box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
-}
-.tips-tricks__switcher  .switcher__btn-rgt{
-    position: absolute;
-    margin: 0;
-    top: 128px;
-    right: -6px;
-    z-index: 2;
-
-    background-color: #fff;
-    opacity: 1;
-    box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
-}
-
-
-.tips-tricks__cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 32px;
-    margin-bottom: 32px;
-}
-
-
-.tips-tricks__link img {
-    width: 100%;
-}
-
-.tips-tricks__link{
-    transition: all .4s ease-in-out;
-}
-
-.tips-tricks__link:hover,
-.tips-tricks__link:focus {
-    box-shadow: 0px 5px 5px #828282;
-}
-
-.tips-tricks__text{
-    margin: 16px 0 8px 16px;
-    font-size: 24px;
-    line-height: 120%;
-    color: #3A3A3A;
-}
-
-
-.tips-tricks__date{
-    margin: 0 0 16px 16px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    color: #898989;
-}
-
-
-.tips-tricks__slider-dots{
-    justify-content: center;
-}
-
-/* ================ SETUPS ============== */
-
-.setups {
-    margin-bottom: 167px;
-}
-
-.setups__wrapper{
-    position: relative;
-}
-
-.setups__text{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    margin: 0 auto;
-}
-
-.setups__title{
-    margin: 0 auto 8px;
-
-    font-size: 20px;
-    line-height: 150%;
-    text-align: center;
-    color: #616161;
-
-}
-
-.setups__subtitle{
-    margin: 0;
-
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 120%;
-    text-align: center;
-    color: #3A3A3A;
-}
-
-
-.setups__content{
-    display:  flex;
-    overflow: hidden;
-}
-
-.setups__content-block-lft{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 0 40%;
-    margin-right: 16px;   
-}
-
-.setups__photo{
-    margin: 8px;
-}
-
-.setups__photo-1,
-.setups__photo-2 {
-    align-self: flex-end;
-}
-
-.setups__photo-3,
-.setups__photo-4 {
-    align-self: flex-start;
-}
-
-.setups__content-block-center{
-    display: flex;
-    margin: 16px;
-    flex: 0 0 20%;
-}
-
-.setups__photo-5{
-    align-self: center ;
-}
-
-.setups__content-block-rgt{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 0 40%;
-}
-
-.setups__photo-7{
-    max-height: 382px;
-}
-
-.setups__photo-6,
-.setups__photo-7 {
-    align-self: flex-end;
-}
-
-.setups__photo-8,
-.setups__photo-9 {
-    align-self: flex-start;
-}
-
-
-/* =================== FOOTER =============== */
-
-
-.footer__wrapper {
-    display: flex;
-    position: relative;
-}
-
-
-.footer__wrapper::before{
-    position: absolute;
-    content: "";
-    margin: 0 auto ;
-    height: 2px; 
-    width: 1235px;
-    top: -80px;
-    left: 0px;
-
-    background-color: #D8D8D8;
-}
-
-.footer__funiro-inf{
-    margin-right: 80px;
-}
-
-.footer__link-logo{
-    margin: 0 0 15px ;
-}
-
-.footer__funiro-inf-item{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #616161;
-}
-
-
-.footer__link--visited ,
-.footer__link--visited:visited{
-    color: #616161;
-}
-
-
-.footer__funiro-inf-item:not(:last-child) {
-    margin-bottom: 16px;
-}
-
-.footer__link-geo,
-.footer__telephone {
-    display: flex;
-}
-
-.geo-icon,
-.phone-icon{
-    margin-right: 8px;
-}
-
-.footer__menu{
-    margin-right: 80px;
-}
-
-.footer__title{
-    display: block;
-    margin: 0 0 15px;
-
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    color: #000000;
-}
-
-.footer__item-link{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #616161;
-    transition: all .4s ease-in-out;
-}
-
-.footer__item-link:hover,
-.footer__item-link:focus {
-    color: #E89F71;
-}
-
-.footer__menu-item:not(:last-child) {
-    margin-bottom: 16px;
-}
-
-.footer__account{
-    margin-right: 80px;
-}
-
-.footer__account-item:not(:last-child) {
-    margin-bottom: 16px;
-}
-
-.footer__stay-connect{
-    margin-right: 80px;
-}
-
-.footer__stay-connect-item:not(:last-child) {
-    margin-bottom: 16px;
-}
-
-.form-subscribe {
-    display: flex;
-}
-
-.form-subscribe__input{ 
-    margin-right: 4px;
-    max-width: 240px;
-    
-    background-color: #F4F5F7;
-    border: none;
-    text-indent: 12px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #828282;
-}
-
-.form-subscribe__button{
-    padding: 10px;
-
-    background-color: #E89F71;
-    border: none;
-}
-
-.form-subscribe__button svg path{
-    fill: #fff;
-}
-
-
-
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNIRO - High-Quality Furniture Just For You</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrapper wrapper--central">
+            <a href="#" class="header__link-logo link--default">
+                <img src="./img/logo/Funiro_logo.svg" alt="link to Funiro home" class="logo">
+            </a>
+
+            <nav class="header__nav">
+               <ul class="header__list list--reset">
+                    <li class="header__list-item">
+                        <a href="#" class="header__item-link link--default">
+                            <span class="header__item-text header__item-text--submenu">Products</span>
+                            <svg class="arrow-down" width="16" height="16" aria-label="arrow down icon" 
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"/></svg>
+                        </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#" class="header__item-link link--default">
+                            <span class="header__item-text header__item-text--submenu">Rooms</span>
+                            <svg class="arrow-down" width="16" height="16" aria-label="arrow down icon" 
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"/></svg>
+                        </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#" class="header__item-link link--default">
+                            <span class="header__item-text">Inspirations</span>
+                        </a>
+               </ul>    
+            </nav>
+            
+            <form action="#" class="form-search">
+                
+                <button class="form-search__button" ><svg width="16" height="16" viewBox="0 0 16 16" aria-label="button with icon search" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.6666 14.6667L10.5801 10.5802M10.5801 10.5802C11.5604 9.59998 12.1666 8.24581 12.1666 6.75004C12.1666 3.7585 9.74152 1.33337 6.74998 1.33337C3.75844 1.33337 1.33331 3.7585 1.33331 6.75004C1.33331 9.74158 3.75844 12.1667 6.74998 12.1667C8.24575 12.1667 9.59992 11.5604 10.5801 10.5802Z" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </button>
+                <input type="text" class="form-search__input" 
+                placeholder="Search for minimalist chair...."name="search" aria-label="search">
+            </form>
+
+           <div class="header__list-personal list--reset">
+                <a href="#" class="header__link-wish-list 
+                link--default">
+                <img src="./img/logo/wish-list_logo.svg" alt="icon wish list" class="wish-list-logo">
+                </a>
+
+                <a href="#" class="header__link-shopping-cart link--default">
+                <img src="./img/logo/shopping-cart_logo.svg" alt="icon shopping cart" class="shopping-cart-logo">
+                </a>
+
+                <a href="#" class="header__link-account 
+                link--default">
+                <img src="./img/logo/preview_acc.png" alt="thumbnail account photo" class="account-logo">
+                </a>
+            </div>  
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__wrapper">
+
+                <div class="hero__content">
+
+                    <div class="hero__central-block">
+                        <h1 class="hero__title">
+                            High-Quality Furniture Just For You
+                        </h1>
+                        <p class="hero__subtitle">Our furniture is&nbsp;made from selected and best quality materials that are suitable for your dream hom</p>
+                        <a href="#" class="hero__btn-shop-now link--default">Shop Now</a>
+                    </div>
+
+                    <div class="hero__elements-controls">
+                        <ul class="slider-dots list--reset">
+                            <li class="slider-dots__item">
+                                <button class="slider-dots__btn" type="button"   
+                                name="dots"> 
+                                    <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                            <li class="slider-dots__item">
+                                <button class="slider-dots__btn" type="button" name="dots"> 
+                                    <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                            <li class="slider-dots__item">
+                                <button class="slider-dots__btn" type="button" name="dots"> 
+                                    <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                            <li class="slider-dots__item">
+                                <button class="slider-dots__btn" type="button" name="dots"> 
+                                    <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                        </ul>   
+                    </div>
+
+                    <div class="switcher">
+                        <button class="switcher__btn-lft">
+                            <svg class="lft-arrow" aria-label="right arrow icon" width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/>
+                            </svg>
+                        </button>
+                        <button class="switcher__btn-rgt">
+                            <svg class="rgt-arrow" aria-label="left arrow 
+                            icon" width="24px" height="24px"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="hero__img-switcher">
+                    <div class="hero__template-img">
+                        <img src="./img/bg/bg_1.jpg" alt="template furniture first" class="hero__images">
+                    </div>
+                    <div class="hero__template-img">
+                        <img src="./img/bg/bg_2.jpg" alt="template furniture second" class="hero__images">
+                        <div class="hero__descr-item">
+                            <span class="hero__name-series">Bohauss</span>
+                            <span class="hero__name-subtitle">Luxury big sofa 2-seat</span>
+                            <span class="hero__price">Rp 17.000.000</span>
+                            <a href="#" class="hero__link-details link--default">
+                                <svg class="arrow-long-right" aria-label="right arrow icon" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.3652 6.56003L10.3852 11.56C10.2252 11.72 10.0251 11.8 9.82515 11.8C9.62515 11.8 9.42515 11.72 9.26515 11.56C8.94515 11.24 8.94515 10.74 9.26515 10.42L12.8852 6.78003H1.20515C0.765151 6.78003 0.405151 6.42003 0.405151 5.98003C0.405151 5.54003 0.765151 5.18003 1.20515 5.18003H12.8852L9.26515 1.54004C8.94515 1.22004 8.94515 0.720034 9.26515 0.400034C9.58515 0.0800342 10.0852 0.0800342 10.4052 0.400034L15.3852 5.40003C15.6852 5.74003 15.6852 6.26003 15.3652 6.56003Z" fill="black"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero__template-img">
+                        <img src="./img/bg/bg_3.jpg" alt="template furniture third" class="hero__images">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="advantages">
+            <div class="avantages__wrapper wrapper--central">
+                <div class="advantages__card">
+                    <img src="./img/advantages/trophy.svg" alt="trophy pic" class="advantages__pic">
+                    <div class="advantages__block-text">
+                        <div class="advantages__title">
+                            High Quality
+                        </div>
+                        <div class="advantages__subtitle">
+                            Crafted from top materials
+                        </div>
+                    </div>    
+                </div>
+                <div class="advantages__card">
+                    <img src="./img/advantages/check.svg" alt="check pic " class="advantages__pic">
+                    <div class="advantages__block-text">
+                        <div class="advantages__title">
+                            Warrany Protection
+                        </div>
+                        <div class="advantages__subtitle">
+                            Over 2 years
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages__card">
+                    <img src="./img/advantages/shipping.svg" alt="shipping icon" class="advantages__pic">
+                    <div class="advantages__block-text">
+                        <div class="advantages__title">
+                            Free Shipping
+                        </div>
+                        <div class="advantages__subtitle">
+                            Order over 150&nbsp;$
+                        </div>
+                    </div>    
+                </div>
+                <div class="advantages__card">
+                    <img src="./img/advantages/customer-support.svg" alt="customer-support icon" class="advantages__pic">
+                    <div class="advantages__block-text">
+                        <div class="advantages__title">
+                            24&nbsp;/ 7&nbsp;Support
+                        </div>
+                        <div class="advantages__subtitle">
+                            Dedicated support
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <section class="our-products">
+            <div class="our-products__wrapper wrapper--central">
+                <h2 class="our-products__title">Our Products</h2>
+                <div class="our-products__cards">
+                    <div class="our-products__card">
+                        <img src="./img/our-products/photo-1.jpg" alt="photo chair" class="our-products__photo">
+                        <span class="our-products__features">-30%</span>
+                        <div class="our-products__text">
+                            <span class="our-products__name-series">Syltherine</span>
+                            <span class="our-products__name-subtitle">Stylish cafe chair</span>
+                            <span class="our-products__price">Rp 2.500.000</span>
+                            <span class="our-products__price-sale">Rp 3.500.000</span>
+                        </div>
+                       
+                        <div class="our-products__wrapper-card">
+                            <a href="#" class="add-tocard__link link--default">
+                                <span>Add to cart</span>
+                            </a>
+                            
+                           <div class="our-products__social-media">
+                            <div class="our-products__share">
+                                <a href="#" class="share__link link--default">
+                                 <svg class="share-pic" aria-label="share icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18 16C17.212 16 16.5 16.31 15.966 16.807L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.088 18.308C15.0317 18.5344 15.0022 18.7667 15 19C15 19.5933 15.1759 20.1734 15.5056 20.6667C15.8352 21.1601 16.3038 21.5446 16.8519 21.7716C17.4001 21.9987 18.0033 22.0581 18.5853 21.9424C19.1672 21.8266 19.7018 21.5409 20.1213 21.1213C20.5409 20.7018 20.8266 20.1672 20.9424 19.5853C21.0581 19.0033 20.9987 18.4001 20.7716 17.8519C20.5446 17.3038 20.1601 16.8352 19.6667 16.5056C19.1734 16.1759 18.5933 16 18 16Z" fill="white"/>
+                                 </svg>
+                                 <span class="share__text">Share</span>
+                                </a>
+                            </div>
+                            <div class="our-products__like">
+                                <a href="#" class="like__link">
+                                 <svg class="like-pic" aria-label="like icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11.3777 18.9244C-8.62194 7.87027 5.37804 -4.12973 11.3777 3.45833C17.3781 -4.12973 31.378 7.87027 11.3777 18.9244Z" stroke="#262F56" stroke-width="1.8"/>
+                                 </svg>
+                                 <span class="like__text">Like</span>  
+                                </a>
+                            </div>
+                           </div>
+                       </div> 
+                    </div> <!-- end card  -->
+                    <div class="our-products__card">
+                        <img src="./img/our-products/photo-2.jpg" alt="photo chair" class="our-products__photo">
+                        <span class="our-products__features without-category"></span>
+                        <div class="our-products__text">
+                            <span class="our-products__name-series">Leviosa</span>
+                            <span class="our-products__name-subtitle">Stylish cafe chair</span>
+                            <span class="our-products__price">Rp 2.500.000</span>
+                            <span class="our-products__price-sale without-category"></span>
+                        </div>
+                       
+                        <div class="our-products__wrapper-card">
+                            <a href="#" class="add-tocard__link link--default">
+                                <span>Add to cart</span>
+                            </a>
+                            
+                           <div class="our-products__social-media">
+                            <div class="our-products__share">
+                                <a href="#" class="share__link link--default">
+                                 <svg class="share-pic" aria-label="share icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18 16C17.212 16 16.5 16.31 15.966 16.807L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.088 18.308C15.0317 18.5344 15.0022 18.7667 15 19C15 19.5933 15.1759 20.1734 15.5056 20.6667C15.8352 21.1601 16.3038 21.5446 16.8519 21.7716C17.4001 21.9987 18.0033 22.0581 18.5853 21.9424C19.1672 21.8266 19.7018 21.5409 20.1213 21.1213C20.5409 20.7018 20.8266 20.1672 20.9424 19.5853C21.0581 19.0033 20.9987 18.4001 20.7716 17.8519C20.5446 17.3038 20.1601 16.8352 19.6667 16.5056C19.1734 16.1759 18.5933 16 18 16Z" fill="white"/>
+                                 </svg>
+                                 <span class="share__text">Share</span>
+                                </a>
+                            </div>
+                            <div class="our-products__like">
+                                <a href="#" class="like__link">
+                                 <svg class="like-pic" aria-label="like icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11.3777 18.9244C-8.62194 7.87027 5.37804 -4.12973 11.3777 3.45833C17.3781 -4.12973 31.378 7.87027 11.3777 18.9244Z" stroke="#262F56" stroke-width="1.8"/>
+                                 </svg>
+                                 <span class="like__text">Like</span>  
+                                </a>
+                            </div>
+                           </div>
+                       </div> 
+                    </div>  <!-- end card  -->
+                    <div class="our-products__card">
+                        <img src="./img/our-products/photo-3.jpg" alt="photo sofa" class="our-products__photo">
+                        <span class="our-products__features">-50%</span>
+                        <div class="our-products__text">
+                            <span class="our-products__name-series">Lolito</span>
+                            <span class="our-products__name-subtitle">Luxury big sofa</span>
+                            <span class="our-products__price">Rp 7.500.000</span>
+                            <span class="our-products__price-sale">Rp 14.500.000 </span>
+                        </div>
+                       
+                        <div class="our-products__wrapper-card">
+                            <a href="#" class="add-tocard__link link--default">
+                                <span>Add to cart</span>
+                            </a>
+                            
+                           <div class="our-products__social-media">
+                            <div class="our-products__share">
+                                <a href="#" class="share__link link--default">
+                                 <svg class="share-pic" aria-label="share icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18 16C17.212 16 16.5 16.31 15.966 16.807L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.088 18.308C15.0317 18.5344 15.0022 18.7667 15 19C15 19.5933 15.1759 20.1734 15.5056 20.6667C15.8352 21.1601 16.3038 21.5446 16.8519 21.7716C17.4001 21.9987 18.0033 22.0581 18.5853 21.9424C19.1672 21.8266 19.7018 21.5409 20.1213 21.1213C20.5409 20.7018 20.8266 20.1672 20.9424 19.5853C21.0581 19.0033 20.9987 18.4001 20.7716 17.8519C20.5446 17.3038 20.1601 16.8352 19.6667 16.5056C19.1734 16.1759 18.5933 16 18 16Z" fill="white"/>
+                                 </svg>
+                                 <span class="share__text">Share</span>
+                                </a>
+                            </div>
+                            <div class="our-products__like">
+                                <a href="#" class="like__link">
+                                 <svg class="like-pic" aria-label="like icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11.3777 18.9244C-8.62194 7.87027 5.37804 -4.12973 11.3777 3.45833C17.3781 -4.12973 31.378 7.87027 11.3777 18.9244Z" stroke="#262F56" stroke-width="1.8"/>
+                                 </svg>
+                                 <span class="like__text">Like</span>  
+                                </a>
+                            </div>
+                           </div>
+                       </div> 
+                    </div>  <!-- end card  -->
+                    <div class="our-products__card">
+                        <img src="./img/our-products/photo-4.jpg" alt="photo fan" class="our-products__photo">
+                        <span class="our-products__features features--new">New</span>
+                        <div class="our-products__text">
+                            <span class="our-products__name-series">Respira</span>
+                            <span class="our-products__name-subtitle">Stylish cafe chair</span>
+                            <span class="our-products__price">Rp 500.000</span>
+                            <span class="our-products__price-sale without-category"></span>
+                        </div>
+                       
+                        <div class="our-products__wrapper-card">
+                            <a href="#" class="add-tocard__link link--default">
+                                <span>Add to cart</span>
+                            </a>
+                            
+                           <div class="our-products__social-media">
+                            <div class="our-products__share">
+                                <a href="#" class="share__link link--default">
+                                 <svg class="share-pic" aria-label="share icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18 16C17.212 16 16.5 16.31 15.966 16.807L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.088 18.308C15.0317 18.5344 15.0022 18.7667 15 19C15 19.5933 15.1759 20.1734 15.5056 20.6667C15.8352 21.1601 16.3038 21.5446 16.8519 21.7716C17.4001 21.9987 18.0033 22.0581 18.5853 21.9424C19.1672 21.8266 19.7018 21.5409 20.1213 21.1213C20.5409 20.7018 20.8266 20.1672 20.9424 19.5853C21.0581 19.0033 20.9987 18.4001 20.7716 17.8519C20.5446 17.3038 20.1601 16.8352 19.6667 16.5056C19.1734 16.1759 18.5933 16 18 16Z" fill="white"/>
+                                 </svg>
+                                 <span class="share__text">Share</span>
+                                </a>
+                            </div>
+                            <div class="our-products__like">
+                                <a href="#" class="like__link">
+                                 <svg class="like-pic" aria-label="like icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11.3777 18.9244C-8.62194 7.87027 5.37804 -4.12973 11.3777 3.45833C17.3781 -4.12973 31.378 7.87027 11.3777 18.9244Z" stroke="#262F56" stroke-width="1.8"/>
+                                 </svg>
+                                 <span class="like__text">Like</span>  
+                                </a>
+                            </div>
+                           </div>
+                       </div> 
+                    </div>  <!-- end card  -->
+                    <div class="our-products__card">
+                        <img src="./img/our-products/photo-5.jpg" alt="photo lamp" class="our-products__photo">
+                        <span class="our-products__features without-category"></span>
+                        <div class="our-products__text">
+                            <span class="our-products__name-series">Grifo</span>
+                            <span class="our-products__name-subtitle">Night lamp</span>
+                            <span class="our-products__price">Rp 1.500.000</span>
+                            <span class="our-products__price-sale without-category"></span>
+                        </div>
+                       
+                        <div class="our-products__wrapper-card">
+                            <a href="#" class="add-tocard__link link--default">
+                                <span>Add to cart</span>
+                            </a>
+                            
+                           <div class="our-products__social-media">
+                            <div class="our-products__share">
+                                <a href="#" class="share__link link--default">
+                                 <svg class="share-pic" aria-label="share icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18 16C17.212 16 16.5 16.31 15.966 16.807L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.088 18.308C15.0317 18.5344 15.0022 18.7667 15 19C15 19.5933 15.1759 20.1734 15.5056 20.6667C15.8352 21.1601 16.3038 21.5446 16.8519 21.7716C17.4001 21.9987 18.0033 22.0581 18.5853 21.9424C19.1672 21.8266 19.7018 21.5409 20.1213 21.1213C20.5409 20.7018 20.8266 20.1672 20.9424 19.5853C21.0581 19.0033 20.9987 18.4001 20.7716 17.8519C20.5446 17.3038 20.1601 16.8352 19.6667 16.5056C19.1734 16.1759 18.5933 16 18 16Z" fill="white"/>
+                                 </svg>
+                                 <span class="share__text">Share</span>
+                                </a>
+                            </div>
+                            <div class="our-products__like">
+                                <a href="#" class="like__link">
+                                 <svg class="like-pic" aria-label="like icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11.3777 18.9244C-8.62194 7.87027 5.37804 -4.12973 11.3777 3.45833C17.3781 -4.12973 31.378 7.87027 11.3777 18.9244Z" stroke="#262F56" stroke-width="1.8"/>
+                                 </svg>
+                                 <span class="like__text">Like</span>  
+                                </a>
+                            </div>
+                           </div>
+                       </div> 
+                    </div>  <!-- end card  -->
+                    <div class="our-products__card">
+                        <img src="./img/our-products/photo-6.jpg" alt="photo mug" class="our-products__photo">
+                        <span class="our-products__features features--new">New</span>
+                        <div class="our-products__text">
+                            <span class="our-products__name-series">Muggo</span>
+                            <span class="our-products__name-subtitle">Small mug</span>
+                            <span class="our-products__price">Rp 150.000</span>
+                            <span class="our-products__price-sale without-category"></span>
+                        </div>
+                       
+                        <div class="our-products__wrapper-card">
+                            <a href="#" class="add-tocard__link link--default">
+                                <span>Add to cart</span>
+                            </a>
+                            
+                           <div class="our-products__social-media">
+                            <div class="our-products__share">
+                                <a href="#" class="share__link link--default">
+                                 <svg class="share-pic" aria-label="share icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18 16C17.212 16 16.5 16.31 15.966 16.807L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.088 18.308C15.0317 18.5344 15.0022 18.7667 15 19C15 19.5933 15.1759 20.1734 15.5056 20.6667C15.8352 21.1601 16.3038 21.5446 16.8519 21.7716C17.4001 21.9987 18.0033 22.0581 18.5853 21.9424C19.1672 21.8266 19.7018 21.5409 20.1213 21.1213C20.5409 20.7018 20.8266 20.1672 20.9424 19.5853C21.0581 19.0033 20.9987 18.4001 20.7716 17.8519C20.5446 17.3038 20.1601 16.8352 19.6667 16.5056C19.1734 16.1759 18.5933 16 18 16Z" fill="white"/>
+                                 </svg>
+                                 <span class="share__text">Share</span>
+                                </a>
+                            </div>
+                            <div class="our-products__like">
+                                <a href="#" class="like__link">
+                                 <svg class="like-pic" aria-label="like icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11.3777 18.9244C-8.62194 7.87027 5.37804 -4.12973 11.3777 3.45833C17.3781 -4.12973 31.378 7.87027 11.3777 18.9244Z" stroke="#262F56" stroke-width="1.8"/>
+                                 </svg>
+                                 <span class="like__text">Like</span>  
+                                </a>
+                            </div>
+                           </div>
+                       </div> 
+                    </div>  <!-- end card  -->
+                    <div class="our-products__card">
+                        <img src="./img/our-products/photo-7.jpg" alt="photo bed set" class="our-products__photo">
+                        <span class="our-products__features">-50%</span>
+                        <div class="our-products__text">
+                            <span class="our-products__name-series">Pingky</span>
+                            <span class="our-products__name-subtitle">Cute bed set</span>
+                            <span class="our-products__price">Rp 7.500.000</span>
+                            <span class="our-products__price-sale">Rp 14.000.000</span>
+                        </div>
+                       
+                        <div class="our-products__wrapper-card">
+                            <a href="#" class="add-tocard__link link--default">
+                                <span>Add to cart</span>
+                            </a>
+                            
+                           <div class="our-products__social-media">
+                            <div class="our-products__share">
+                                <a href="#" class="share__link link--default">
+                                 <svg class="share-pic" aria-label="share icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18 16C17.212 16 16.5 16.31 15.966 16.807L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.088 18.308C15.0317 18.5344 15.0022 18.7667 15 19C15 19.5933 15.1759 20.1734 15.5056 20.6667C15.8352 21.1601 16.3038 21.5446 16.8519 21.7716C17.4001 21.9987 18.0033 22.0581 18.5853 21.9424C19.1672 21.8266 19.7018 21.5409 20.1213 21.1213C20.5409 20.7018 20.8266 20.1672 20.9424 19.5853C21.0581 19.0033 20.9987 18.4001 20.7716 17.8519C20.5446 17.3038 20.1601 16.8352 19.6667 16.5056C19.1734 16.1759 18.5933 16 18 16Z" fill="white"/>
+                                 </svg>
+                                 <span class="share__text">Share</span>
+                                </a>
+                            </div>
+                            <div class="our-products__like">
+                                <a href="#" class="like__link">
+                                 <svg class="like-pic" aria-label="like icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11.3777 18.9244C-8.62194 7.87027 5.37804 -4.12973 11.3777 3.45833C17.3781 -4.12973 31.378 7.87027 11.3777 18.9244Z" stroke="#262F56" stroke-width="1.8"/>
+                                 </svg>
+                                 <span class="like__text">Like</span>  
+                                </a>
+                            </div>
+                           </div>
+                       </div> 
+                    </div>  <!-- end card  -->
+                    <div class="our-products__card">
+                        <img src="./img/our-products/photo-8.jpg" alt="photo chair" class="our-products__photo">
+                        <span class="our-products__features features--new">New
+                        </span>
+                        <div class="our-products__text">
+                            <span class="our-products__name-series">Potty</span>
+                            <span class="our-products__name-subtitle">Minimalist flower pot</span>
+                            <span class="our-products__price">Rp 500.000</span>
+                            <span class="our-products__price-sale without-category"></span>
+                        </div>
+                       
+                        <div class="our-products__wrapper-card">
+                            <a href="#" class="add-tocard__link link--default">
+                                <span>Add to cart</span>
+                            </a>
+                            
+                           <div class="our-products__social-media">
+                            <div class="our-products__share">
+                                <a href="#" class="share__link link--default">
+                                 <svg class="share-pic" aria-label="share icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18 16C17.212 16 16.5 16.31 15.966 16.807L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.088 18.308C15.0317 18.5344 15.0022 18.7667 15 19C15 19.5933 15.1759 20.1734 15.5056 20.6667C15.8352 21.1601 16.3038 21.5446 16.8519 21.7716C17.4001 21.9987 18.0033 22.0581 18.5853 21.9424C19.1672 21.8266 19.7018 21.5409 20.1213 21.1213C20.5409 20.7018 20.8266 20.1672 20.9424 19.5853C21.0581 19.0033 20.9987 18.4001 20.7716 17.8519C20.5446 17.3038 20.1601 16.8352 19.6667 16.5056C19.1734 16.1759 18.5933 16 18 16Z" fill="white"/>
+                                 </svg>
+                                 <span class="share__text">Share</span>
+                                </a>
+                            </div>
+                            <div class="our-products__like">
+                                <a href="#" class="like__link">
+                                 <svg class="like-pic" aria-label="like icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11.3777 18.9244C-8.62194 7.87027 5.37804 -4.12973 11.3777 3.45833C17.3781 -4.12973 31.378 7.87027 11.3777 18.9244Z" stroke="#262F56" stroke-width="1.8"/>
+                                 </svg>
+                                 <span class="like__text">Like</span>  
+                                </a>
+                            </div>
+                           </div>
+                       </div> 
+                    </div>  <!-- end card  -->
+                </div>
+                <a href="#" class="our-products__show-more-btn link--default">
+                    <span>Show More</span>
+                </a>
+            </div>
+        </section>
+        <div class="room-insp">
+            <div class="room-insp__wrapper">
+                <div class="room-insp__text">
+                    <div class="room-insp__text-wrapper">  
+                        <h2 class="room-insp__title">
+                            50+&nbsp;Beautiful rooms inspiration
+                        </h2>
+                        <p class="room-insp__subtitle">
+                            Our designer already made a&nbsp;lot of&nbsp;beautiful prototipe of&nbsp;rooms that inspire you
+                        </p>
+                        <a href="#" class="room-insp__explore-btn link--default">
+                            <span>Explore More</span>
+                        </a>
+                    </div>      
+                </div>
+
+                <div class="room-insp__content">
+                    <div class="room-inst__general-block-photo">
+                        <img src="./img/rooms_inspiration/photo-1.jpg" alt="bed room photo" class="room-inst__first-photo">
+                        <div class="room-insp__block-info">
+                            <span class="room-insp__name-category">01 -- Bed Room</span>
+                            <span class="room-insp__name-product">
+                                Inner Peace
+                            </span>
+                            <a href="#" class="room-insp__link-to-product link--default">
+                                <svg class="arrow-long-right" aria-label="right arrow icon" width="18" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.3652 6.56003L10.3852 11.56C10.2252 11.72 10.0251 11.8 9.82515 11.8C9.62515 11.8 9.42515 11.72 9.26515 11.56C8.94515 11.24 8.94515 10.74 9.26515 10.42L12.8852 6.78003H1.20515C0.765151 6.78003 0.405151 6.42003 0.405151 5.98003C0.405151 5.54003 0.765151 5.18003 1.20515 5.18003H12.8852L9.26515 1.54004C8.94515 1.22004 8.94515 0.720034 9.26515 0.400034C9.58515 0.0800342 10.0852 0.0800342 10.4052 0.400034L15.3852 5.40003C15.6852 5.74003 15.6852 6.26003 15.3652 6.56003Z" fill="black"/>
+                                    </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="room-inst__middle-block-photo">
+                        <img src="./img/rooms_inspiration/photo-2.jpg" alt="photo kitchen" class="room-inst__middle-photo">
+                        <ul class="room-inst___slider slider-dots list--reset">
+                            <li class="slider-dots__item">
+                                <button class="slider-dots__btn" type="button"   
+                                name="dots"> 
+                                    <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                            <li class="slider-dots__item">
+                                <button class="slider-dots__btn" type="button" name="dots"> 
+                                    <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                            <li class="slider-dots__item">
+                                <button class="slider-dots__btn" type="button" name="dots"> 
+                                    <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                            <li class="slider-dots__item">
+                                <button class="slider-dots__btn" type="button" name="dots"> 
+                                    <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                        </ul> 
+                        <div class="room-inst___switcher switcher">
+                            <button class="switcher__btn-rgt">
+                                <svg class="rgt-arrow" aria-label="left arrow 
+                                icon" width="24px" height="24px"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="room-inst___last-block-photo">
+                        <img src="./img/rooms_inspiration/photo-3-2.jpg" alt="bedside table photo" class="room-inst___last-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tips-tricks">
+            <div class="tips-tricks__wrapper wrapper--central">
+                <h3 class="tips-triks__title">
+                    Tips &amp;&nbsp;Tricks
+                </h3>
+                <div class="tips-tricks__control">
+                    <div class="tips-tricks__switcher switcher">
+                        <button class="switcher__btn-lft">
+                            <svg class="lft-arrow" aria-label="right arrow icon" width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/>
+                            </svg>
+                        </button>
+                        <button class="switcher__btn-rgt">
+                            <svg class="rgt-arrow" aria-label="left arrow 
+                            icon" width="24px" height="24px"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
+                        </button>
+                    </div>
+                </div>    
+                <div class="tips-tricks__content">
+                    <div class="tips-tricks__cards">
+                        <div class="tips-tricks__card">
+                            <a href="#" class="tips-tricks__link link--default">
+                                <img src="./img/tips_triks/photo_1.jpg" alt="family on room" class="tips-tricks__photo">
+                                <p class="tips-tricks__text">
+                                    How to&nbsp;create a&nbsp;living room <br> to&nbsp;love
+                                </p>
+                                <span class="tips-tricks__date">20&nbsp;jan 2020
+                                </span>
+                            </a>        
+                        </div>
+
+                        <div class="tips-tricks__card">
+                            <a href="#" class="tips-tricks__link link--default">
+                                <img src="./img/tips_triks/photo_2.jpg" alt="photo work space" class="tips-tricks__photo">
+                                <p class="tips-tricks__text">
+                                    Solution for clean look working space
+                                </p>
+                                <span class="tips-tricks__date">10&nbsp;jan 2020
+                                </span>
+                            </a>    
+                        </div>
+
+                        <div class="tips-tricks__card">
+                            <a href="#" class="tips-tricks__link link--default">
+                                <img src="./img/tips_triks/photo_3.jpg" alt="photo kitchen" class="tips-tricks__photo">
+                                <p class="tips-tricks__text">
+                                    Make your cooking activity more fun with good setup
+                                </p>
+                                <span class="tips-tricks__date">20&nbsp;jan 2020
+                                </span>
+                            </a>    
+                        </div>
+                    </div>
+                    <ul class="tips-tricks__slider-dots slider-dots list--reset">
+                        <li class="slider-dots__item">
+                            <button class="slider-dots__btn" type="button"   
+                            name="dots"> 
+                                <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                </svg> 
+                            </button>
+                        </li>
+                        <li class="slider-dots__item">
+                            <button class="slider-dots__btn" type="button" name="dots"> 
+                                <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                </svg> 
+                            </button>
+                        </li>
+                        <li class="slider-dots__item">
+                            <button class="slider-dots__btn" type="button" name="dots"> 
+                                <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                </svg> 
+                            </button>
+                        </li>
+                        <li class="slider-dots__item">
+                            <button class="slider-dots__btn" type="button" name="dots"> 
+                                <svg class="dot" aria-laber="dot pic on slider" width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+                                </svg> 
+                            </button>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+        </div>
+        <section class="setups">
+            <div class="setups__wrapper">
+                <div class="setups__text">
+                    <h3 class="setups__title">Share your setup with</h3>
+                    <h4 class="setups__subtitle">#FuniroFurniture</h4>
+                </div>
+                <div class="setups__content">
+                    <div class="setups__content-block-lft">
+                        <img src="./img/setups/photo_1.jpg" alt="bookcase photo" class="setups__photo-1 setups__photo">
+                        <img src="./img/setups/photo_2.jpg" alt="chair photo" class="setups__photo-2 setups__photo">
+                        <img src="./img/setups/photo_3.jpg" alt="work space photo" class="setups__photo-3 setups__photo">
+                        <img src="./img/setups/photo_4.jpg" alt="stoll photo" class="setups__photo-4 setups__photo">
+                    </div>
+                    <div class="setups__content-block-center">
+                        <img src="./img/setups/photo_5.jpg" alt="kitchen photo" class="setups__photo-5 setups__photo">
+                    </div>
+                    <div class="setups__content-block-rgt">
+                        <img src="./img/setups/photo_6.jpg" alt="bed room photo" class="setups__photo-6 setups__photo">
+                        <img src="./img/setups/photo_7-2.jpg" alt="photo frame" class="setups__photo-7 setups__photo">
+                        <img src="./img/setups/photo_8.jpg" alt="kitchen photo" class="setups__photo-8 setups__photo">
+                        <img src="./img/setups/photo_9.jpg" alt="kitchen photo" class="setups__photo-9 setups__photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper wrapper--central">
+            <div class="footer__funiro-inf">
+                <a href="#" class="footer__link-logo header__link-logo link--default">
+                    <img src="./img/logo/Funiro_logo.svg" alt="link to Funiro home" class="logo">
+                </a>
+                <ul class="footer__funiro-inf-list list--reset">
+                    <li class="footer__funiro-inf-item">
+                        <p class="footer__about-us">
+                            Worldwide furniture store since 2020. We&nbsp;sell over 1000+ branded products on&nbsp;our website
+                        </p>
+                    </li>
+                    <li class="footer__funiro-inf-item">
+                        <a href="https://goo.gl/maps/oc5WZpqESS45djLSA" class="footer__link-geo footer__link--visited  link--default">
+                            <svg class="geo-icon" aria-label="link to geolocation on google maps" width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.97405 18.5413C11.0898 17.0976 15.9167 13.3048 15.9167 8.74992C15.9167 4.37766 12.3723 0.833252 8.00001 0.833252C3.62776 0.833252 0.0833435 4.37766 0.0833435 8.74992C0.0833435 13.3048 4.91026 17.0976 7.02597 18.5413C7.6176 18.945 8.38242 18.945 8.97405 18.5413ZM8.00001 11.2499C9.38072 11.2499 10.5 10.1306 10.5 8.74992C10.5 7.36921 9.38072 6.24992 8.00001 6.24992C6.6193 6.24992 5.50001 7.36921 5.50001 8.74992C5.50001 10.1306 6.6193 11.2499 8.00001 11.2499Z" fill="#898989"/>
+                            </svg>                                
+                            <address class="footer__address">Sawojajar Malang, Indonesia</address>
+                        </a>
+                    </li>
+                    <li class="footer__funiro-inf-item">
+                        <a href="tel:+62894563455" class="footer__telephone footer__link--visited  link--default">
+                            <svg class="phone-icon" aria-label="link to phone number" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.4307 11.0668L10.9152 11.8401C10.8123 11.9944 10.6762 12.1261 10.4969 12.1735C9.90947 12.3287 8.34991 12.3988 5.97551 10.0244C3.60112 7.65004 3.6712 6.09046 3.82642 5.50302C3.87381 5.32368 4.0055 5.1876 4.15984 5.0847L4.93309 4.5692C5.50879 4.1854 5.66436 3.40757 5.28056 2.83187L3.82015 0.64126C3.48515 0.138762 2.83934 -0.0532187 2.28424 0.18468L1.62545 0.467021C1.12499 0.681503 0.716751 1.06643 0.47325 1.55343C0.269813 1.96031 0.112135 2.38877 0.0907716 2.84317C0.0234458 4.27515 0.337442 7.80312 4.26714 11.7328C8.19683 15.6625 11.7248 15.9765 13.1568 15.9092C13.6112 15.8878 14.0396 15.7301 14.4465 15.5267C14.9335 15.2832 15.3184 14.8749 15.5329 14.3745L15.8152 13.7157C16.0531 13.1606 15.8612 12.5148 15.3587 12.1798L13.1681 10.7194C12.5924 10.3356 11.8145 10.4911 11.4307 11.0668Z" fill="#898989"/>
+                            </svg>   
+                            +6289 456 3455
+                        </a>
+                    </li>
+                    <li class="footer__funiro-inf-item">
+                        <a href="#" class="footer__link-home footer__link-geo--visited  link--default">
+                            www.funiro.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__menu">
+                <span class="footer__menu-title footer__title">Menu</span>
+                <ul class="footer__menu-list list--reset">
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link footer__item-link link--default">
+                            Products
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link footer__item-link link--default">
+                            Rooms
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link footer__item-link link--default">
+                            Inspirations
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link footer__item-link link--default">
+                            About&nbsp;Us
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link footer__item-link link--default">
+                            Terms&amp;&nbsp;Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__account">
+                <span class="footer__account-title footer__title">
+                    Account
+                </span>
+                <ul class="footer__account-list list--reset">
+                    <li class="footer__account-item">
+                        <a href="" class="footer__account-link footer__item-link link--default">
+                            My Account
+                        </a>
+                    </li>
+                    <li class="footer__account-item">
+                        <a href="" class="footer__account-link footer__item-link link--default">
+                            Checkout
+                        </a>
+                    </li>
+                    <li class="footer__account-item">
+                        <a href="" class="footer__account-link footer__item-link link--default">
+                            My Cart
+                        </a>
+                    </li>
+                    <li class="footer__account-item">
+                        <a href="" class="footer__account-link footer__item-link link--default">
+                            My catalog
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__stay-connect">
+                <span class="footer__stay-connect-title footer__title">Stay&nbsp;Connected</span>
+                <ul class="footer__stay-connect-list list--reset">
+                    <li class="footer__stay-connect-item">
+                        <a href="#" target="_blank" class="footer__stay-connect-link footer__item-link link--default">
+                            Facebook
+                        </a>
+                    </li> 
+                    <li class="footer__stay-connect-item">
+                        <a href="#" target="_blank" class="footer__stay-connect-link footer__item-link link--default">
+                            Instagram
+                        </a>
+                    </li> 
+                    <li class="footer__stay-connect-item">
+                        <a href="#" target="_blank" class="footer__stay-connect-link footer__item-link link--default">
+                            Twitter
+                        </a>
+                    </li> 
+                </ul>
+            </div>
+            <div class="footer__stay-update">
+                <span class="footer__stay-update footer__title">
+                    Stay Updated
+                </span> 
+                <form action="#" class="form-subscribe">
+                    <input type="mailto" class="form-subscribe__input" 
+                    placeholder="Enter your email" name="subscribe" aria-label="subscribe">
+                    <button class="form-subscribe__button">
+                    <svg width="24" height="24" viewBox="0 0 512 512" aria-label="button with icon subscribe emails" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M501.6 4.186c-7.594-5.156-17.41-5.594-25.44-1.063L12.12 267.1C4.184 271.7-.5037 280.3 .0431 289.4c.5469 9.125 6.234 17.16 14.66 20.69l153.3 64.38v113.5c0 8.781 4.797 16.84 12.5 21.06C184.1 511 188 512 191.1 512c4.516 0 9.038-1.281 12.99-3.812l111.2-71.46l98.56 41.4c2.984 1.25 6.141 1.875 9.297 1.875c4.078 0 8.141-1.031 11.78-3.094c6.453-3.625 10.88-10.06 11.95-17.38l64-432C513.1 18.44 509.1 9.373 501.6 4.186zM369.3 119.2l-187.1 208.9L78.23 284.7L369.3 119.2zM215.1 444v-49.36l46.45 19.51L215.1 444zM404.8 421.9l-176.6-74.19l224.6-249.5L404.8 421.9z"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
